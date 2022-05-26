@@ -1,0 +1,25 @@
+{
+    "baseUrl": "https://uat.get-licensed.co.uk",
+    "defaultCommandTimeout": 8000,
+    "exectimeout": 80000,
+    "taskTimeout": 80000,
+    "pageLoadTimeout": 80000,
+    "requestTimeout": 80000,
+    "responseTimeout": 80000,
+    "screenshotFolder":"cypress/screenshots",
+    "videosFolder":"cypress/videos",
+    "videoUploadOnPasses": true,
+    "theme": "dark",
+    "darkMediaQuery": true,
+    "viewportHeight": 1000,
+    "viewportWidth": 1280,
+    "experimentalSessionAndOrigin": false,
+    "reporter": "mochawesome",
+    "reporterOption":{
+        "reportDir": "cypress/report",
+        "overwrite": true,
+        "html": true,
+        "json": false
+
+    }
+}

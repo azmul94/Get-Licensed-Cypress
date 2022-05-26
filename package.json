@@ -1,0 +1,30 @@
+{
+  "name": "get-licensed-cypress",
+  "version": "1.0.0",
+  "description": "Automated software tesing with cypress",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "open",
+    "start": "run"
+  },
+  "browser": {
+    "node_modules/chai": "./node_modules/chai.js"
+  },
+  "keywords": [
+    "testing",
+    "cypress",
+    "automation",
+    "testing"
+  ],
+  "author": "Azmul Haq",
+  "license": "ISC",
+  "dependencies": {
+    "mochawesome": "^7.0.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "cypress": "^9.6.0",
+    "cypress-dark": "^1.8.3",
+    "cypress-iframe": "^1.0.1"
+  }
+}
