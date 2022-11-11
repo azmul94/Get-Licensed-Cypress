@@ -1,5 +1,5 @@
 {
-    "baseUrl": "https://uat.get-licensed.co.uk",
+    "baseUrl": "https://qa-test.get-licensed.co.uk",
     "defaultCommandTimeout": 8000,
     "exectimeout": 80000,
     "taskTimeout": 80000,
@@ -14,6 +14,7 @@
     "viewportHeight": 1000,
     "viewportWidth": 1280,
     "experimentalSessionAndOrigin": false,
+    "chromeWebSecurity": false,
     "reporter": "mochawesome",
     "reporterOption":{
         "reportDir": "cypress/report",

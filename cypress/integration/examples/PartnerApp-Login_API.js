@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-import { email, password } from '../../fixtures/Login'
+import { url, email, password } from '../../fixtures/Login'
 
 describe("REST API test with Cypress ", () => {
     
@@ -8,7 +8,7 @@ describe("REST API test with Cypress ", () => {
         cy.request({
             // POST call for login
             method: 'POST',
-            url: 'https://uat.get-licensed.co.uk/api/v1/partners/login',
+            url: url,
             headers: {
                 'Accept': 'application/json',
                 'Content-type' : 'application/json'

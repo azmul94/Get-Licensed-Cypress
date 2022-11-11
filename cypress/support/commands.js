@@ -18,13 +18,33 @@
 import 'cypress-iframe'
 
 
-Cypress.Commands.add('getIframe', (iframe) => {
-    return cy.get(iframe)
-        .its('0.contentDocument.body')
-        .should('be.visible')
-        .then(cy.wrap)
-        .find('card-number-element')
-})
+// Cypress.Commands.add('fillOutCreditCardForm', details => {
+//     console.log('details')
+//     cy.get('.__PrivateStripeElement > iframe')
+//       .iframe()
+//       .then(iframes => {
+//         cy.wrap(iframes[0])
+//           .find('.InputElement')
+//           .first()
+//           .fill(
+//             4222222222222
+//           );
+//         cy.wrap(iframes[1])
+//           .find('.InputElement')
+//           .first()
+//           .fill(
+//             '02/25'
+//           );
+//         cy.wrap(iframes[2])
+//           .find('.InputElement')
+//           .first()
+//           .fill(333);
+//         cy.wrap(iframes[3])
+//           .find('.InputElement')
+//           .first()
+//           .fill("Azmul");
+//       });
+//   });
 
 // cy.frameLoaded('.__PrivateStripeElement')
 // cy.iframe('.__PrivateStripeElement')

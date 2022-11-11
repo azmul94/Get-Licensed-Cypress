@@ -10,13 +10,13 @@ describe('browser action', () => {
     });
 
     it('click on door supervisor course', () => {
-        cy.get('.btn-warning')
+        cy.get('.btn-warning-dark')
         .contains('Door Supervisor').should('have.text', ' Door Supervisor ')
         .click()
     });
 
     it('click on book now button', () => {
-        cy.get(':nth-child(7) > .btn-secondary')
+        cy.get(':nth-child(6) > .btn-secondary')
         .contains('Book Now').should('have.text', 'Book Now')
         .click()
     });
@@ -63,7 +63,7 @@ describe('browser action', () => {
     });
 
     it('Click on Next Step 2', () => {
-        cy.get('#step2').should('have.text','Next').click()
+        cy.get('#step2').contains('Next').should('have.text', 'Next').click()
     });
 
     it('Skip the products', () => {
@@ -71,9 +71,16 @@ describe('browser action', () => {
     });
 
     it('Payment information', () => {
-        cy.get('.mb-3 > :nth-child(2) > label').click('center', {force: true})
-        // cy.get('.col-md-10 > .card-number-element').click('center', {force: true})
-        // cy.get('.col-md-10 > .card-number-element > .StripeElement > .__PrivateStripeElement > iframe')
+        cy.get('.radiobuttons > .mb-3 > :nth-child(1)').click('center', {force: true}).click()
+        cy.get('.col-md-10 > .card-number-element').click('center', {force: true}).click()
+        cy.get('.col-md-10 > .card-number-element > .StripeElement > .__PrivateStripeElement > iframe').click()
+        cy.get('.col-md-10 > .card-number-element > .StripeElement > .__PrivateStripeElement > iframe').within(() => {
+              cy.fillElementsInput('cardNumber', '4242424242424242');
+              cy.fillElementsInput('cardExpiry', '1025'); // MMYY
+              cy.fillElementsInput('cardCvc', '123');
+            });
+
+        // cy.fillOutCreditCardForm({ number: 4242424242424242, expiration: '02/25', cvc: 100, name_On_Card: "Azmul"})
         // .then(function ($iframe) {
         //     const $body = $iframe.contents().find('body')
         //     cy.wrap($body)
@@ -96,10 +103,8 @@ describe('browser action', () => {
         // .click('left', {force: true}).type('582')
         // cy.get('#floatingFullName').click().type('Azmul"s Script')
         cy.get('#agreed_terms_policies').click()
-        cy.get('.btn-container > .btn').click()
+        // cy.origin("https://www.sandbox.paypal.com", () =>{
 
-        cy.origin("https://www.sandbox.paypal.com", () =>{
-
-        });
+        // });
     });
 })

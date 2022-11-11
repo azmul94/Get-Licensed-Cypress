@@ -20,3 +20,6 @@ import './commands'
 // require('cypress-xpath')
 
 require('cypress-dark')
+
+// cypress/support/index.js
+import 'cypress-plugin-stripe-elements';

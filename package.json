@@ -4,8 +4,8 @@
   "description": "Automated software tesing with cypress",
   "main": "index.js",
   "scripts": {
-    "cy:open": "open",
-    "start": "run"
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
   },
   "browser": {
     "node_modules/chai": "./node_modules/chai.js"
@@ -25,6 +25,7 @@
     "chai": "^4.3.4",
     "cypress": "^9.6.0",
     "cypress-dark": "^1.8.3",
-    "cypress-iframe": "^1.0.1"
+    "cypress-iframe": "^1.0.1",
+    "cypress-plugin-stripe-elements": "^1.0.2"
   }
 }
